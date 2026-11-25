@@ -162,6 +162,12 @@
       "expect_needs_review": true
     }
   ],
+  "stats": {
+    "id": "S-01",
+    "user": "nurse_zhou",
+    "expect_scope": "心内科",
+    "expect_definition_keyword": "完成随访表"
+  },
   "idempotency": {
     "id": "I-01",
     "followup_id": "FU-202610-012",

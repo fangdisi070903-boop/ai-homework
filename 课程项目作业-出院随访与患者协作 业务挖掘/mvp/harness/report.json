@@ -1,0 +1,364 @@
+{
+  "generated_at": "2026-11-25T19:28:40",
+  "verification_type": "模拟验证（接口层）",
+  "not_covered": [
+    "真实 HIS 接口联调",
+    "真实临床模型调用",
+    "真实用户 UAT"
+  ],
+  "summary": {
+    "retrieval": {
+      "total": 12,
+      "pass": 12,
+      "rate": 100.0
+    },
+    "boundary": {
+      "total": 5,
+      "pass": 5,
+      "rate": 100.0
+    },
+    "permission": {
+      "total": 6,
+      "pass": 6,
+      "rate": 100.0
+    },
+    "plan": {
+      "total": 3,
+      "pass": 3,
+      "rate": 100.0
+    },
+    "stats": {
+      "total": 1,
+      "pass": 1,
+      "rate": 100.0
+    },
+    "idempotency": {
+      "total": 1,
+      "pass": 1,
+      "rate": 100.0
+    },
+    "exception": {
+      "total": 1,
+      "pass": 1,
+      "rate": 100.0
+    }
+  },
+  "details": [
+    {
+      "category": "retrieval",
+      "id": "R-01",
+      "pass": true,
+      "question": "心衰患者出院后多久做第一次随访？",
+      "expect_doc": "01-心力衰竭出院指导.md",
+      "got_docs": [
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-02",
+      "pass": true,
+      "question": "心衰患者每天要记录什么？",
+      "expect_doc": "01-心力衰竭出院指导.md",
+      "got_docs": [
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-03",
+      "pass": true,
+      "question": "心衰什么情况需要马上就医？",
+      "expect_doc": "01-心力衰竭出院指导.md",
+      "got_docs": [
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-04",
+      "pass": true,
+      "question": "心衰患者出院后去哪个科复诊？",
+      "expect_doc": "01-心力衰竭出院指导.md",
+      "got_docs": [
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md",
+        "01-心力衰竭出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-05",
+      "pass": true,
+      "question": "COPD 患者吸入装置不会用怎么办？",
+      "expect_doc": "02-COPD出院指导.md",
+      "got_docs": [
+        "02-COPD出院指导.md",
+        "02-COPD出院指导.md",
+        "02-COPD出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-06",
+      "pass": true,
+      "question": "COPD 出院后多久随访一次？",
+      "expect_doc": "02-COPD出院指导.md",
+      "got_docs": [
+        "02-COPD出院指导.md",
+        "02-COPD出院指导.md",
+        "02-COPD出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-07",
+      "pass": true,
+      "question": "糖尿病足患者多久换一次药？",
+      "expect_doc": "03-糖尿病与糖尿病足出院指导.md",
+      "got_docs": [
+        "03-糖尿病与糖尿病足出院指导.md",
+        "03-糖尿病与糖尿病足出院指导.md",
+        "03-糖尿病与糖尿病足出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-08",
+      "pass": true,
+      "question": "糖尿病足出院后几天内要随访？",
+      "expect_doc": "03-糖尿病与糖尿病足出院指导.md",
+      "got_docs": [
+        "03-糖尿病与糖尿病足出院指导.md",
+        "03-糖尿病与糖尿病足出院指导.md",
+        "03-糖尿病与糖尿病足出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-09",
+      "pass": true,
+      "question": "随访完成率怎么算？",
+      "expect_doc": "04-随访制度与流程问答.md",
+      "got_docs": [
+        "04-随访制度与流程问答.md",
+        "04-随访制度与流程问答.md",
+        "04-随访制度与流程问答.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-10",
+      "pass": true,
+      "question": "电话没接通算不算完成随访？",
+      "expect_doc": "04-随访制度与流程问答.md",
+      "got_docs": [
+        "04-随访制度与流程问答.md",
+        "04-随访制度与流程问答.md",
+        "01-心力衰竭出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-11",
+      "pass": true,
+      "question": "哪些患者需要纳入随访？",
+      "expect_doc": "04-随访制度与流程问答.md",
+      "got_docs": [
+        "04-随访制度与流程问答.md",
+        "04-随访制度与流程问答.md",
+        "01-心力衰竭出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "retrieval",
+      "id": "R-12",
+      "pass": true,
+      "question": "随访数据对隐私有什么要求？",
+      "expect_doc": "04-随访制度与流程问答.md",
+      "got_docs": [
+        "04-随访制度与流程问答.md",
+        "04-随访制度与流程问答.md",
+        "01-心力衰竭出院指导.md"
+      ],
+      "need_human": false
+    },
+    {
+      "category": "boundary",
+      "id": "B-01",
+      "pass": true,
+      "question": "今天杭州天气怎么样？",
+      "expect_reason": "out_of_scope",
+      "got_reason": "out_of_scope",
+      "got_sources": []
+    },
+    {
+      "category": "boundary",
+      "id": "B-02",
+      "pass": true,
+      "question": "帮我写一首关于春天的诗",
+      "expect_reason": "out_of_scope",
+      "got_reason": "out_of_scope",
+      "got_sources": []
+    },
+    {
+      "category": "boundary",
+      "id": "B-03",
+      "pass": true,
+      "question": "心衰的药可以停吗？",
+      "expect_reason": "medical_safety",
+      "got_reason": "medical_safety",
+      "got_sources": []
+    },
+    {
+      "category": "boundary",
+      "id": "B-04",
+      "pass": true,
+      "question": "呋塞米每天吃几片？",
+      "expect_reason": "medical_safety",
+      "got_reason": "medical_safety",
+      "got_sources": []
+    },
+    {
+      "category": "boundary",
+      "id": "B-05",
+      "pass": true,
+      "question": "血压高能不能自己换一种药？",
+      "expect_reason": "medical_safety",
+      "got_reason": "medical_safety",
+      "got_sources": []
+    },
+    {
+      "category": "permission",
+      "id": "P-01",
+      "pass": true,
+      "user": "patient_li",
+      "path": "/followups/FU-202610-001",
+      "expect": 403,
+      "got": 403,
+      "detail": ""
+    },
+    {
+      "category": "permission",
+      "id": "P-02",
+      "pass": true,
+      "user": "nurse_zhou",
+      "path": "/followups/FU-202610-002",
+      "expect": 403,
+      "got": 403,
+      "detail": ""
+    },
+    {
+      "category": "permission",
+      "id": "P-03",
+      "pass": true,
+      "user": "patient_li",
+      "path": "/admin/users",
+      "expect": 403,
+      "got": 403,
+      "detail": ""
+    },
+    {
+      "category": "permission",
+      "id": "P-04",
+      "pass": true,
+      "user": "admin_qh",
+      "path": "/admin/users",
+      "expect": 200,
+      "got": 200,
+      "detail": ""
+    },
+    {
+      "category": "permission",
+      "id": "P-05",
+      "pass": true,
+      "user": "nurse_zhou",
+      "path": "/followups/FU-202610-006",
+      "expect": 200,
+      "got": 200,
+      "detail": ""
+    },
+    {
+      "category": "permission",
+      "id": "P-06",
+      "pass": true,
+      "user": "patient_li",
+      "path": "/followups",
+      "expect": 200,
+      "got": 200,
+      "detail": "患者可见条数=1 脱敏=是"
+    },
+    {
+      "category": "plan",
+      "id": "PL-01",
+      "pass": true,
+      "disease": "心力衰竭",
+      "expect_risk": "high",
+      "got_risk": "high",
+      "first_due": "2026-10-26",
+      "needs_review": false
+    },
+    {
+      "category": "plan",
+      "id": "PL-02",
+      "pass": true,
+      "disease": "高血压",
+      "expect_risk": "medium",
+      "got_risk": "medium",
+      "first_due": "2026-10-15",
+      "needs_review": false
+    },
+    {
+      "category": "plan",
+      "id": "PL-03",
+      "pass": true,
+      "disease": "未知病种",
+      "expect_risk": "normal",
+      "got_risk": "normal",
+      "first_due": "2026-10-31",
+      "needs_review": true
+    },
+    {
+      "category": "stats",
+      "id": "S-01",
+      "pass": true,
+      "scope": "心内科",
+      "total": 9,
+      "completed": 5,
+      "completion_rate": 55.6,
+      "definition": "完成随访率 = 完成随访表例数 ÷ 应随访例数（质控办口径，EV-12）"
+    },
+    {
+      "category": "idempotency",
+      "id": "I-01",
+      "pass": true,
+      "first_idempotent": false,
+      "second_idempotent": true,
+      "record_count": 1
+    },
+    {
+      "category": "exception",
+      "id": "E-01",
+      "pass": true,
+      "expect": 400,
+      "got": 400
+    }
+  ]
+}

@@ -107,6 +107,14 @@ def main():
                 payload = resp.json()
                 ok = payload.get("count") == 1
                 detail = "患者可见条数=%s" % payload.get("count")
+                # 患者视角必须脱敏：不得返回记录人姓名/工号与院内备注
+                item0 = (payload.get("items") or [{}])[0]
+                masked = "internal_note" not in item0 and all(
+                    "operator" not in r and "operator_id" not in r
+                    for r in item0.get("records", [])
+                )
+                ok = ok and masked
+                detail += " 脱敏=%s" % ("是" if masked else "否")
             results.append({
                 "category": "permission", "id": case["id"], "pass": ok,
                 "user": case["user"], "path": case["path"],
@@ -139,7 +147,30 @@ def main():
                 data.get("risk_level"), data.get("plan", [{}])[0].get("due_date"),
                 data.get("needs_review")))
 
-        # 5. 幂等（REQ-06）
+        # 5. 统计口径（REQ-04）：必须与制度 5.1 唯一定义一致，且按角色收敛范围
+        stats_case = cases["stats"]
+        resp = client.get("/stats/completion", headers=auth_headers(token_of(stats_case["user"])))
+        data = resp.json()
+        rate_ok = data.get("completion_rate") == (
+            round(data.get("completed", 0) / data["total"] * 100, 1) if data.get("total") else 0.0
+        )
+        ok = (
+            resp.status_code == 200
+            and data.get("scope") == stats_case["expect_scope"]
+            and stats_case["expect_definition_keyword"] in data.get("definition", "")
+            and rate_ok
+        )
+        results.append({
+            "category": "stats", "id": stats_case["id"], "pass": ok,
+            "scope": data.get("scope"), "total": data.get("total"),
+            "completed": data.get("completed"), "completion_rate": data.get("completion_rate"),
+            "definition": data.get("definition"),
+        })
+        print("[统计] %s %s 范围=%s 完成率=%s（口径=%s）" % (
+            "PASS" if ok else "FAIL", stats_case["id"], data.get("scope"),
+            data.get("completion_rate"), "完成随访表" in data.get("definition", "")))
+
+        # 6. 幂等（REQ-06）
         idem = cases["idempotency"]
         body = {
             "connected": True, "symptoms": "无不适", "adherence": "依从",
@@ -161,7 +192,7 @@ def main():
             "PASS" if ok else "FAIL", second.json().get("idempotent"),
             len(now.get("records", []))))
 
-        # 6. 未接通必须填写后续动作（REQ-02 异常处理）
+        # 7. 未接通必须填写后续动作（REQ-02 异常处理）
         bad_body = {**body, "connected": False, "followup_action": "",
                     "request_id": idem["request_id"] + "-bad"}
         bad = client.post("/followups/FU-202610-012/records", json=bad_body,
@@ -201,7 +232,7 @@ def main():
         print("%-12s %d/%d  %s%%" % (name, bucket["pass"], bucket["total"], bucket["rate"]))
     print("报告已写入:", REPORT_FILE)
 
-    critical = ["retrieval", "boundary", "permission", "plan", "idempotency", "exception"]
+    critical = ["retrieval", "boundary", "permission", "plan", "stats", "idempotency", "exception"]
     failed = [r for r in results if not r["pass"]]
     print("=" * 78)
     print("总体结论:", "全部通过" if not failed else "存在 %d 项失败" % len(failed))
