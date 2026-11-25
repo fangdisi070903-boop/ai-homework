@@ -1,0 +1,328 @@
+{
+  "_note": "课程模拟数据（虚构），患者仅以 MRN 标识。status: 待随访 / 已完成 / 待跟进 / 失访",
+  "followups": [
+    {
+      "id": "FU-202610-001",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260021",
+      "patient_name": "张某某",
+      "disease": "PCI术后",
+      "discharge_date": "2026-10-08",
+      "risk_level": "high",
+      "plan_due": "2026-10-15",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-001-R1",
+          "at": "2026-10-15T10:05:00",
+          "operator_id": "nurse_zhou",
+          "operator": "周晓燕",
+          "connected": true,
+          "symptoms": "穿刺点轻微淤青",
+          "adherence": "按时服药",
+          "followup_action": "",
+          "note": "已指导观察",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-001"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-002",
+      "tenant": "qinghe",
+      "dept": "呼吸内科",
+      "mrn": "MRN20260034",
+      "patient_name": "王某某",
+      "disease": "COPD",
+      "discharge_date": "2026-10-10",
+      "risk_level": "high",
+      "plan_due": "2026-10-17",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-002-R1",
+          "at": "2026-10-17T11:20:00",
+          "operator_id": "nurse_chen",
+          "operator": "陈默",
+          "connected": true,
+          "symptoms": "咳嗽较前减轻",
+          "adherence": "吸入剂使用正确",
+          "followup_action": "",
+          "note": "已复述吸入剂用法",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-002"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-003",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260042",
+      "patient_name": "赵某某",
+      "disease": "高血压",
+      "discharge_date": "2026-10-12",
+      "risk_level": "medium",
+      "plan_due": "2026-10-26",
+      "status": "失访",
+      "records": [
+        {
+          "record_id": "FU-202610-003-R1",
+          "at": "2026-10-19T09:40:00",
+          "operator_id": "nurse_zhou",
+          "operator": "周晓燕",
+          "connected": false,
+          "symptoms": "",
+          "adherence": "",
+          "followup_action": "未填写（历史数据问题）",
+          "note": "无人接听，未再联系",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-003"],
+      "internal_note": "对应矛盾点 C-02：未接通被标为已随访"
+    },
+    {
+      "id": "FU-202610-004",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260055",
+      "patient_name": "孙某某",
+      "disease": "心力衰竭",
+      "discharge_date": "2026-10-14",
+      "risk_level": "high",
+      "plan_due": "2026-10-21",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-004-R1",
+          "at": "2026-10-21T14:30:00",
+          "operator_id": "nurse_chen",
+          "operator": "陈默",
+          "connected": true,
+          "symptoms": "无气促",
+          "adherence": "每日称重",
+          "followup_action": "",
+          "note": "体重稳定",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-004"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-005",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260061",
+      "patient_name": "周某某",
+      "disease": "心力衰竭",
+      "discharge_date": "2026-10-16",
+      "risk_level": "high",
+      "plan_due": "2026-10-23",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-005-R1",
+          "at": "2026-10-23T10:15:00",
+          "operator_id": "nurse_zhou",
+          "operator": "周晓燕",
+          "connected": true,
+          "symptoms": "轻度气促",
+          "adherence": "部分依从",
+          "followup_action": "",
+          "note": "家属代接，已交代记录体重与尿量",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-005"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-006",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260077",
+      "patient_name": "李国某",
+      "disease": "心力衰竭",
+      "discharge_date": "2026-10-19",
+      "risk_level": "high",
+      "plan_due": "2026-10-22",
+      "status": "失访",
+      "records": [
+        {
+          "record_id": "FU-202610-006-R1",
+          "at": "2026-10-22T15:12:00",
+          "operator_id": "nurse_zhou",
+          "operator": "周晓燕",
+          "connected": false,
+          "symptoms": "",
+          "adherence": "",
+          "followup_action": "未填写（历史数据问题）",
+          "note": "患者未接听，未再联系；10-28 因气促水肿再入院（EV-01）",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-006"],
+      "internal_note": "本案例触发事件的患者"
+    },
+    {
+      "id": "FU-202610-007",
+      "tenant": "qinghe",
+      "dept": "呼吸内科",
+      "mrn": "MRN20260083",
+      "patient_name": "吴某某",
+      "disease": "COPD",
+      "discharge_date": "2026-10-20",
+      "risk_level": "high",
+      "plan_due": "2026-10-27",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-007-R1",
+          "at": "2026-10-27T09:55:00",
+          "operator_id": "nurse_chen",
+          "operator": "陈默",
+          "connected": true,
+          "symptoms": "气促加重",
+          "adherence": "按时用药",
+          "followup_action": "",
+          "note": "已建议门诊复诊",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-007"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-008",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260090",
+      "patient_name": "郑某某",
+      "disease": "糖尿病足",
+      "discharge_date": "2026-10-22",
+      "risk_level": "high",
+      "plan_due": "2026-10-29",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-008-R1",
+          "at": "2026-10-29T15:40:00",
+          "operator_id": "nurse_chen",
+          "operator": "陈默",
+          "connected": true,
+          "symptoms": "足部溃疡渗液减少",
+          "adherence": "按时换药",
+          "followup_action": "",
+          "note": "建议一周后门诊换药",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-008"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-009",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260102",
+      "patient_name": "冯某某",
+      "disease": "PCI术后",
+      "discharge_date": "2026-10-24",
+      "risk_level": "high",
+      "plan_due": "2026-10-31",
+      "status": "待跟进",
+      "records": [
+        {
+          "record_id": "FU-202610-009-R1",
+          "at": "2026-10-31T11:05:00",
+          "operator_id": "nurse_zhou",
+          "operator": "周晓燕",
+          "connected": false,
+          "symptoms": "",
+          "adherence": "",
+          "followup_action": "已发短信，待家属回电",
+          "note": "号码为空，病案系统亦未获取",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-009"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-010",
+      "tenant": "qinghe",
+      "dept": "呼吸内科",
+      "mrn": "MRN20260115",
+      "patient_name": "陈某某",
+      "disease": "COPD",
+      "discharge_date": "2026-10-26",
+      "risk_level": "high",
+      "plan_due": "2026-11-02",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-010-R1",
+          "at": "2026-11-02T10:30:00",
+          "operator_id": "nurse_chen",
+          "operator": "陈默",
+          "connected": true,
+          "symptoms": "稳定",
+          "adherence": "依从",
+          "followup_action": "",
+          "note": "家属反映吸入装置不会用，已电话指导",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-010"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-011",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260128",
+      "patient_name": "褚某某",
+      "disease": "心力衰竭",
+      "discharge_date": "2026-10-28",
+      "risk_level": "high",
+      "plan_due": "2026-11-04",
+      "status": "已完成",
+      "records": [
+        {
+          "record_id": "FU-202610-011-R1",
+          "at": "2026-11-04T16:10:00",
+          "operator_id": "nurse_chen",
+          "operator": "陈默",
+          "connected": true,
+          "symptoms": "3 天体重增加 1.5 kg",
+          "adherence": "依从",
+          "followup_action": "",
+          "note": "已建议次日门诊",
+          "revision": 1
+        }
+      ],
+      "request_ids": ["seed-011"],
+      "internal_note": ""
+    },
+    {
+      "id": "FU-202610-012",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260133",
+      "patient_name": "卫某某",
+      "disease": "高血压",
+      "discharge_date": "2026-10-30",
+      "risk_level": "medium",
+      "plan_due": "2026-11-13",
+      "status": "待随访",
+      "records": [],
+      "request_ids": [],
+      "internal_note": ""
+    }
+  ]
+}

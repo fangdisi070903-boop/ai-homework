@@ -1,0 +1,48 @@
+{
+  "_note": "课程演示账号，密码仅用于本地运行；真实系统必须使用统一身份认证且不存明文密码。",
+  "users": {
+    "admin_qh": {
+      "password": "admin123",
+      "name": "系统管理员",
+      "role": "admin",
+      "tenant": "*",
+      "dept": ""
+    },
+    "doctor_wang": {
+      "password": "doc123",
+      "name": "王振国立",
+      "role": "doctor",
+      "tenant": "qinghe",
+      "dept": "心内科"
+    },
+    "doctor_liu": {
+      "password": "doc456",
+      "name": "刘敏",
+      "role": "doctor",
+      "tenant": "qinghe",
+      "dept": "呼吸内科"
+    },
+    "nurse_zhou": {
+      "password": "nurse123",
+      "name": "周晓燕",
+      "role": "nurse",
+      "tenant": "qinghe",
+      "dept": "心内科"
+    },
+    "nurse_chen": {
+      "password": "nurse456",
+      "name": "陈默",
+      "role": "nurse",
+      "tenant": "qinghe",
+      "dept": "心内科"
+    },
+    "patient_li": {
+      "password": "pat123",
+      "name": "李国某",
+      "role": "patient",
+      "tenant": "qinghe",
+      "dept": "心内科",
+      "mrn": "MRN20260077"
+    }
+  }
+}
